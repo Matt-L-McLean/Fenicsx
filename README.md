@@ -11,7 +11,7 @@ Note: Fenicsx is currently unable to handle mixed-dimensional models with discon
 
 The poroelastic equations in the weak form with variational test functions $\delta u$ and $\delta p$ are: $$-\int_{\Omega}\nabla\cdot\left(\sigma^{k+1}:\delta \varepsilon^{k+1}\right)\mathrm{d}\Omega=0$$ $$\int_{\Omega}\frac{\alpha^2}{K_u-K_d}\left(\frac{p^{k+1}-p^k}{\Delta t}\right)\delta p^{k+1}\mathrm{d}\Omega + \int_{\Omega}\kappa\left(\nabla p^{k+1}\cdot \nabla\delta p^{k+1} \right)\mathrm{d}\Omega + \int_{\Omega}\frac{\alpha}{\Delta t}\left(\nabla\cdot u^{k+1}-\nabla\cdot u^{k}\right)\delta p^{k+1}\mathrm{d}\Omega=0$$
 
-where $\sigma$ is the total stress, $\varepsilon = 0.5\left(\nabla u + \nabla^T u\right)$ is strain, $\Delta t$ is the time increment, $K_u$ is the undrained bulk modulus, and $K_d$ is the drained bulk modulus. Displacements and fluid pressure with $k+1$ superscript are the current solution while those with $k$ superscript are the solution from previous time step. Other methods of time discretization could be used for increased solution accuracy (e.g., Crank-Nicolson, backward Euler, etc.), however the Euler method is simple to implement.
+where $\sigma$ is the total stress, $\varepsilon = 0.5\left(\nabla \vec{u} + \nabla^T \vec{u}\right)$ is strain, $\Delta t$ is the time increment, $K_u$ is the undrained bulk modulus, and $K_d$ is the drained bulk modulus. Displacements and fluid pressure with $k+1$ superscript are the current solution while those with $k$ superscript are the solution from previous time step. Other methods of time discretization could be used for increased solution accuracy (e.g., Crank-Nicolson, backward Euler, etc.), however the Euler method is simple to implement.
 
 Refs:
 
