@@ -1,4 +1,4 @@
-# Poroelasticity Simulation
+# Poroelasticity: Numerical Simulation
 This repository contains 2D and 3D poroelastic numerical simulations solved with open source software Fenicsx/Dolfinx (Scroggs et al., 2022; Alnaes et al., 2014). FEM mesh is generated through gmsh software (alternatively pygmsh with python) and converted to xdmf file for use in Fenicsx. A mixed finite element function space is employed to solve for displacement $\vec{u}=\left(u,v,w\right)$ and pore fluid pressure $p$. Vector piecewise quadratic Lagrange elements are used for displacement and scalar piecewise linear Lagrange elements are used for fluid pressure. The Euler method of time integration is used to discretize pore fluid diffusion.
 
 A geomechanics sign covention is employed: compressive stress and contraction strain are positive. Units are pascal for stress and meter for length.
